@@ -195,32 +195,36 @@
 <p>Nhập và lựa chọn thông tin đăng ký</p>
 
 <form class="register-form">
-    <input type="text" id="firstname" name="firstname" placeholder="Tên">
-    <input type="text" id="lastname" name="lastname" placeholder="Họ đệm"><br><br>
-    <input type="text" id="email" name="email" placeholder="Địa chỉ Email">
-    <input type="text" id="phonenumber" name="phonenumber" placeholder="SĐT"><br><br>
-    
-    <label>Chọn thành phố</label>
-    <select>
+    <!-- Hàng 1: Tên + Họ đệm -->
+    <div class="form-row">
+        <input type="text" id="firstname" name="firstname" placeholder="Tên">
+        <input type="text" id="lastname" name="lastname" placeholder="Họ đệm">
+    </div>
+
+    <!-- Hàng 2: Email + SĐT -->
+    <div class="form-row">
+        <input type="text" id="email" name="email" placeholder="Địa chỉ Email">
+        <input type="text" id="phonenumber" name="phonenumber" placeholder="SĐT">
+    </div>
+
+    <label for="city">Chọn thành phố</label>
+    <select id="city" name="city">
         <option value="" disabled selected>Tỉnh</option>
         <option value="Hanoi">Hà Nội</option>
-        <option value="Hanoi">Hải Dương</option>
-        <option value="Hanoi">Hải Phòng</option>
-        <option value="Hanoi">Hà Giang</option>
-        <option value="Hanoi">Quảng Ninh</option>
-        <option value="Hanoi">Hưng Yên</option>
-        <option value="Hanoi">Vĩnh Phúc</option>
-        <option value="Hanoi">Phú Thọ</option>
-        <option value="Hanoi">Nha Trang</option>
+        <option value="HaiDuong">Hải Dương</option>
+        <option value="HaiPhong">Hải Phòng</option>
+        <option value="HaGiang">Hà Giang</option>
+        <option value="QuangNinh">Quảng Ninh</option>
+        <option value="HungYen">Hưng Yên</option>
+        <option value="VinhPhuc">Vĩnh Phúc</option>
+        <option value="PhuTho">Phú Thọ</option>
+        <option value="NhaTrang">Nha Trang</option>
     </select>
-    <br><br>
 
     <textarea id="node" name="node" rows="10" cols="50" placeholder="Ghi chú"></textarea>
-    <br><br>
 
     <input type="button" id="btndangki" name="dangky" value="Đăng ký">
 </form>
-
 
 </body>
 </html>>
