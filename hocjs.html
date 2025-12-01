@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học JavaScript</title>
+</head>
+<body>
+    <button id="btnTest" onclick="alert('helloworld')">xinchao</button>
+    <script src="javascript/demo.js"></script>
+    <button id ="myButton">Nhấn vào đây</button>
+    <script>
+      document.getElementById("myButton").onmouseover=function(){
+        alert("su kien da duoc kich hoat");
+      };
+    </script> 
+    
+    <button id="myButton">dung an vao day</button>
+    <form id="myForm">
+      <input type="text"  id="name" placeholder="Nhap ten">
+      <button type="submit">gui</button>
+    </form>
+    <script>
+      document.getElementById("myForm")
+         .addEventListener("submit",function(event){
+          let name=document.getElementById("name").value;
+          if(name===""){
+            alert("vui long nhap lai");
+            event.preventDefault();//ngan chan gui form
+          }
+         });
+    </script>
+    <script type="text/javascript">
+      //chay 1 doan ma sau 1 khoang thoi gian
+      setTimeout(()=>{
+        console.log("chay sau 3 giay");
+      },3000);
+      //chay 1 doan ma lap lai sau moi khoang thoi gian
+      setInterval(()=>{
+        console.log("chay moi 2 giay");
+      },2000);
+    </script>
+</body>
+</html>
