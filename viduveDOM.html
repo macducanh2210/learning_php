@@ -118,8 +118,9 @@
     
     <h2>3. Thay thế Phần tử (Replace Child)</h2>
     <div id="img-container">
-        <img id="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthanhnien.vn%2Fchiem-nguong-nhung-buc-anh-thien-nhien-dep-nhat-the-gioi-18524012511141175.htm&psig=AOvVaw12mBs1NsOYv0i_idczc9uP&ust=1764819112757000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjst8a9oJEDFQAAAAAdAAAAABAL" alt="Hình ảnh ban đầu">
-        
+        <img id="image" id="image"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/T1_esports_logo.svg/2560px-T1_esports_logo.svg.png"
+        alt="Hình ảnh ban đầu">
         <br>
         <button onclick="replaceElement()">Thay thế hình ảnh</button>
     </div>
@@ -173,26 +174,15 @@
         }
 
         function replaceElement() {
-            // 1. Xác định phần tử cha (container) và phần tử con cần thay thế (image)
-            const container = document.getElementById('img-container');
-            const oldImage = document.getElementById('image');
-            
-            // Kiểm tra xem ảnh còn tồn tại không (để tránh lỗi nếu bấm nút lần 2)
-            if (oldImage) {
-                // 2. Tạo phần tử mới (thẻ p)
-                const newPara = document.createElement('p');
-                newPara.textContent = "Hình ảnh đã được thay thế bằng đoạn văn!";
-                
-                // Thêm class hoặc style để chữ màu đỏ như yêu cầu
-                newPara.className = "replaced-text"; 
-                // Hoặc set trực tiếp: newPara.style.color = "red";
+        const imageElement = document.getElementById("image");
 
-                // 3. Thực hiện thay thế: cha.replaceChild(mới, cũ)
-                container.replaceChild(newPara, oldImage);
-            } else {
-                alert("Hình ảnh đã được thay thế rồi!");
-            }
-        }
+        // Ảnh mới
+        imageElement.src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tnamAgTNYi2nE0I8o2UMowUDwdcfsa27Ew&s";
+        imageElement.alt = "Hình ảnh mới";
+        alert("Đã thay thế hình ảnh T liệt!");
+      }
+
 
         // --- CHỨC NĂNG 4: VALIDATION LOGIN ---
         function validateLogin() {
